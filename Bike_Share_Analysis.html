@@ -11840,7 +11840,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[282]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## import all necessary packages and functions.</span>
@@ -11857,7 +11857,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[283]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_first_point</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -11997,7 +11997,7 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[284]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">duration_in_mins</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -12046,7 +12046,7 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[285]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">time_of_trip</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -12064,13 +12064,13 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
     
     <span class="c1"># YOUR CODE HERE</span>
     
-    <span class="k">if</span><span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;NYC&#39;</span><span class="p">):</span>
-        <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;stoptime&#39;</span><span class="p">],</span><span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y %H:%M:%S&#39;</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;NYC&#39;</span><span class="p">):</span>                                                  <span class="c1"># calculating time and date for NYC</span>
+        <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;stoptime&#39;</span><span class="p">],</span><span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y %H:%M:%S&#39;</span><span class="p">)</span> 
             
-    <span class="k">elif</span><span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;Washington&#39;</span><span class="p">):</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;Washington&#39;</span><span class="p">):</span>                                         <span class="c1"># calculating time and date for Washington</span>
         <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;Start date&#39;</span><span class="p">],</span><span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y %H:%M&#39;</span><span class="p">)</span>
         
-    <span class="k">elif</span><span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;Chicago&#39;</span><span class="p">):</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;Chicago&#39;</span><span class="p">):</span>                                            <span class="c1"># calculating time and date for Chicago</span>
         <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;stoptime&#39;</span><span class="p">],</span><span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y %H:%M&#39;</span><span class="p">)</span>
         
     <span class="k">return</span> <span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">date</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%A&#39;</span><span class="p">))</span>
@@ -12094,40 +12094,7 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[286]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">time_of_trip</span><span class="p">(</span><span class="n">example_trips</span><span class="p">[</span><span class="s1">&#39;NYC&#39;</span><span class="p">],</span> <span class="s1">&#39;NYC&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[286]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(1, 0, &#39;Friday&#39;)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[287]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">type_of_user</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -12142,7 +12109,9 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
     
     <span class="c1"># YOUR CODE HERE</span>
     
-    <span class="k">if</span><span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;Washington&#39;</span><span class="p">):</span>
+    <span class="c1">## Here we are normalising the user category data in a uniform manner </span>
+    
+    <span class="k">if</span><span class="p">(</span><span class="n">city</span> <span class="o">==</span> <span class="s1">&#39;Washington&#39;</span><span class="p">):</span>                       
         <span class="k">if</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;Member Type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Registered&#39;</span><span class="p">):</span>
             <span class="n">user_type</span> <span class="o">=</span> <span class="s1">&#39;Subscriber&#39;</span>
         <span class="k">elif</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;Member Type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Casual&#39;</span><span class="p">):</span>
@@ -12182,7 +12151,7 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[288]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">condense_data</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -12239,7 +12208,7 @@ OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[289]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Run this cell to check your work</span>
@@ -12325,7 +12294,7 @@ OrderedDict([(&#39;duration&#39;, &#39;13.983333333333333&#39;),
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[290]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">number_of_trips</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -12362,7 +12331,7 @@ OrderedDict([(&#39;duration&#39;, &#39;13.983333333333333&#39;),
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[291]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Modify this and the previous cell to answer Question 4a. Remember to run ##</span>
@@ -12451,7 +12420,7 @@ Total No of trips = 276798
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[292]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Use this and additional cells to answer Question 4b.                 ##</span>
@@ -12499,7 +12468,7 @@ Total No of trips = 276798
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[293]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Displaying the result after processing from the sumary of data generated before</span>
@@ -12580,7 +12549,7 @@ NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[294]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Use this and additional cells to answer Question 4c. If you have    ##</span>
@@ -12626,7 +12595,7 @@ NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[295]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Displaying the result after processing from the sumary of data generated before</span>
@@ -12675,14 +12644,6 @@ NYC
 <pre>Washington 
  Average_trip_Customert = 21.971775774206193
  Average_trip_Subscriber = 78.0282242257938 % 
-
-Chicago 
- Average_trip_Customert = 23.774798630269924
- Average_trip_Subscriber = 76.22520136973007 % 
-
-NYC 
- Average_trip_Customert = 10.905064342950455
- Average_trip_Subscriber = 89.09493565704955 % 
 
 </pre>
 </div>
@@ -12766,7 +12727,7 @@ NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[297]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Use this and additional cells to collect all of the trip times as a list ##</span>
@@ -12845,13 +12806,28 @@ NYC
 
 </div>
 
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[268]:</div>
+<div class="prompt input_prompt">In&nbsp;[298]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Creating a function to plot a graph</span>
@@ -12865,7 +12841,9 @@ NYC
         <span class="n">trip_duration_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f_in</span><span class="p">)</span>
         <span class="n">dataC</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">dataS</span> <span class="o">=</span> <span class="p">[]</span>
-    
+        <span class="c1">## collecting the data for the plot for different user and cities and ploting the histogram</span>
+        
+        
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">trip_duration_reader</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;user_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Customer&quot;</span><span class="p">:</span>
                 <span class="n">dataC</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="nb">float</span><span class="p">(</span> <span class="n">row</span><span class="p">[</span><span class="n">data_label</span><span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
@@ -12906,7 +12884,7 @@ NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[269]:</div>
+<div class="prompt input_prompt">In&nbsp;[299]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Use this and additional cells to answer Question 5. ##</span>
@@ -13060,7 +13038,7 @@ NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[278]:</div>
+<div class="prompt input_prompt">In&nbsp;[300]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## plotting the bar graphs for the data collected above</span>
@@ -13083,7 +13061,7 @@ NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[279]:</div>
+<div class="prompt input_prompt">In&nbsp;[301]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Use this and additional cells to continue to explore the dataset. ##</span>
@@ -13123,7 +13101,7 @@ NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[281]:</div>
+<div class="prompt input_prompt">In&nbsp;[302]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Displaying the Data now </span>
@@ -13279,7 +13257,7 @@ PDF (.pdf). You may need additional packages or software to perform these export
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[303]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">subprocess</span> <span class="k">import</span> <span class="n">call</span>
@@ -13290,6 +13268,38 @@ PDF (.pdf). You may need additional packages or software to perform these export
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[303]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Resource">Resource<a class="anchor-link" href="#Resource">&#182;</a></h1><ul>
+<li>python documentation : <a href="https://docs.python.org/3/contents.html">Link</a></li>
+<li>Links shared in the project instructions</li>
+</ul>
+
+</div>
+</div>
 </div>
     </div>
   </div>
